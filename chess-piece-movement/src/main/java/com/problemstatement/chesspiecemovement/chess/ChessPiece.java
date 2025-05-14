@@ -1,5 +1,7 @@
 package com.problemstatement.chesspiecemovement.chess;
 
+import java.util.List;
+
 public interface ChessPiece {
-    String evaluatePossibleMovements();
+    List<String> evaluatePossibleMovements();
 }
