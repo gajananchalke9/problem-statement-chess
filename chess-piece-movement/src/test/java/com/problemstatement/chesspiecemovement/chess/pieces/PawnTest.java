@@ -36,4 +36,10 @@ public class PawnTest {
         assertEquals( 1, possibleMoves.size());
         assertEquals( "G4", possibleMoves.get(0));
     }
+
+    @Test
+    void testInvalidPosition(){
+        assertThrows(IllegalArgumentException.class, () -> new Pawn("I4"));
+        assertThrows(IllegalArgumentException.class, () -> new Pawn("A9"));
+    }
 }

@@ -15,6 +15,9 @@ public abstract class AbstractChessPiece implements ChessPiece {
     protected String position;
 
     public AbstractChessPiece(Direction[] allowedDirections, Steps allowedSteps, String position) {
+        if (!ChessUtil.isValidPosition(position)) {
+            throw new IllegalArgumentException("Invalid position:" + position);
+        }
         this.allowedDirections = allowedDirections;
         this.allowedSteps = allowedSteps;
         this.position = position;
@@ -38,12 +41,16 @@ public abstract class AbstractChessPiece implements ChessPiece {
     }
 
     public void setPosition(String position) {
+        if (!ChessUtil.isValidPosition(position)) {
+            throw new IllegalArgumentException("Invalid position:" + position);
+        }
         this.position = position;
     }
 
     @Override
     public List<String> evaluatePossibleMovements() {
         List<String> allPossibleMoves = new ArrayList<>();
+//        this.position = "G0";
         int[] positionIndexes = ChessUtil.getPositionIndexes(position);
 
         for (Direction direction : allowedDirections) {

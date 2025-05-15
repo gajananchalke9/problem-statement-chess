@@ -36,4 +36,10 @@ public class KingTest {
         Set<String> expected = Set.of("F3", "H3", "G2", "G4", "F4", "H4", "F2", "H2");
         assertEquals(expected, Set.copyOf(king.evaluatePossibleMovements()));
     }
+
+    @Test
+    void testInvalidPosition(){
+        assertThrows(IllegalArgumentException.class, () -> new King("I4"));
+        assertThrows(IllegalArgumentException.class, () -> new King("A9"));
+    }
 }

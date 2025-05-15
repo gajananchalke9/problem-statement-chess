@@ -20,7 +20,9 @@ public class ChessUtil {
     public static int [] getPositionIndexes(String position) {
         int x = Column.valueOf(String.valueOf(position.substring(0, 1).toUpperCase())).ordinal();
         int y = Integer.parseInt(position.substring(1)) - 1; // y index will be -1 of actual position
-
+        if(x < 0 || x > 8 || y < 0 || y > 8){
+            throw new IllegalArgumentException("Invalid position:" + position);
+        }
         return new int[]{x, y};
     }
 }
