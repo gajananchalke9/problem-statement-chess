@@ -3,8 +3,6 @@ package com.problemstatement.chesspiecemovement.chess;
 import com.problemstatement.chesspiecemovement.enums.Direction;
 import com.problemstatement.chesspiecemovement.enums.Steps;
 
-import java.util.List;
-
 public class Queen extends AbstractChessPiece {
     public Queen(String position) {
         super(new Direction[]{Direction.LEFT, Direction.RIGHT,
@@ -20,8 +18,4 @@ public class Queen extends AbstractChessPiece {
                 Direction.BACKWARD_LEFT, Direction.BACKWARD_RIGHT}, Steps.ACROSS_BOARD);
     }
 
-    @Override
-    public List<String> evaluatePossibleMovements() {
-        return null;
-    }
 }
