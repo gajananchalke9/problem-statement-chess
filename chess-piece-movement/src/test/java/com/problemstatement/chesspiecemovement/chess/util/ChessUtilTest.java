@@ -36,4 +36,16 @@ public class ChessUtilTest {
         assertEquals(0, indexes[0]);
         assertEquals(0, indexes[1]);
     }
+
+    @Test
+    void testGetPositionIndexesInvalidPosition(){
+        assertThrows(IllegalArgumentException.class, () -> ChessUtil.getPositionIndexes("A9"));
+        assertThrows(IllegalArgumentException.class, () -> ChessUtil.getPositionIndexes("P4"));
+        assertThrows(IllegalArgumentException.class, () -> ChessUtil.getPositionIndexes(""));
+        assertThrows(IllegalArgumentException.class, () -> ChessUtil.getPositionIndexes(" "));
+        assertThrows(IllegalArgumentException.class, () -> ChessUtil.getPositionIndexes("A"));
+        assertThrows(IllegalArgumentException.class, () -> ChessUtil.getPositionIndexes("1"));
+        assertThrows(IllegalArgumentException.class, () -> ChessUtil.getPositionIndexes(null));
+    }
+
 }

@@ -50,7 +50,6 @@ public abstract class AbstractChessPiece implements ChessPiece {
     @Override
     public List<String> evaluatePossibleMovements() {
         List<String> allPossibleMoves = new ArrayList<>();
-//        this.position = "G0";
         int[] positionIndexes = ChessUtil.getPositionIndexes(position);
 
         for (Direction direction : allowedDirections) {
