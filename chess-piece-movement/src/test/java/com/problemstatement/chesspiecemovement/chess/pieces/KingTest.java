@@ -30,12 +30,6 @@ public class KingTest {
         assertEquals(expected, Set.copyOf(king.evaluatePossibleMovements()));
     }
 
-//    @Test
-//    void testKingInvalidPosition() {
-//        assertThrows(IllegalArgumentException.class, () -> new King("H9"));
-//        assertThrows(IllegalArgumentException.class, () -> new King("Z3"));
-//    }
-
     @Test
     void testKingLowerCaseInputPosition() {
         ChessPiece king = new King("g3");

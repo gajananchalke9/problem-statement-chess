@@ -29,12 +29,6 @@ public class PawnTest {
         assertEquals( "A3", possibleMoves.get(0));
     }
 
-//    @Test
-//    void testPawnInvalidPosition(){
-//        assertThrows(IllegalArgumentException.class, () -> new Pawn("H9"));
-//        assertThrows(IllegalArgumentException.class, () -> new Pawn("Z3"));
-//    }
-
     @Test
     void testPawnLowerCaseInputPosition(){
         ChessPiece pawn = new Pawn("g3");
