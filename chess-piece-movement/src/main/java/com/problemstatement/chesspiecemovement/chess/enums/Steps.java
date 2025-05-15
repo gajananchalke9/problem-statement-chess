@@ -1,4 +1,4 @@
-package com.problemstatement.chesspiecemovement.enums;
+package com.problemstatement.chesspiecemovement.chess.enums;
 
 public enum Steps {
     ONE(1),

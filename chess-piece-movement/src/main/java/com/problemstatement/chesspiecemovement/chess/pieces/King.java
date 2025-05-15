@@ -1,7 +1,7 @@
-package com.problemstatement.chesspiecemovement.chess;
+package com.problemstatement.chesspiecemovement.chess.pieces;
 
-import com.problemstatement.chesspiecemovement.enums.Direction;
-import com.problemstatement.chesspiecemovement.enums.Steps;
+import com.problemstatement.chesspiecemovement.chess.enums.Direction;
+import com.problemstatement.chesspiecemovement.chess.enums.Steps;
 
 public class King extends AbstractChessPiece {
     public King(String position) {

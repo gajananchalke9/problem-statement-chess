@@ -1,10 +1,10 @@
-package com.problemstatement.chesspiecemovement.chess;
+package com.problemstatement.chesspiecemovement.chess.pieces;
 
-import com.problemstatement.chesspiecemovement.constants.ChessConstants;
-import com.problemstatement.chesspiecemovement.enums.Column;
-import com.problemstatement.chesspiecemovement.enums.Direction;
-import com.problemstatement.chesspiecemovement.enums.Steps;
-import com.problemstatement.chesspiecemovement.util.ChessUtil;
+import com.problemstatement.chesspiecemovement.chess.constants.ChessConstants;
+import com.problemstatement.chesspiecemovement.chess.enums.Column;
+import com.problemstatement.chesspiecemovement.chess.enums.Direction;
+import com.problemstatement.chesspiecemovement.chess.enums.Steps;
+import com.problemstatement.chesspiecemovement.chess.util.ChessUtil;
 
 import java.util.ArrayList;
 import java.util.List;

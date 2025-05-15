@@ -1,10 +1,10 @@
-package com.problemstatement.chesspiecemovement.controller;
+package com.problemstatement.chesspiecemovement.chess.controller;
 
-import com.problemstatement.chesspiecemovement.chess.ChessPiece;
-import com.problemstatement.chesspiecemovement.chess.King;
-import com.problemstatement.chesspiecemovement.chess.Pawn;
-import com.problemstatement.chesspiecemovement.chess.Queen;
-import com.problemstatement.chesspiecemovement.util.ChessUtil;
+import com.problemstatement.chesspiecemovement.chess.pieces.ChessPiece;
+import com.problemstatement.chesspiecemovement.chess.pieces.King;
+import com.problemstatement.chesspiecemovement.chess.pieces.Pawn;
+import com.problemstatement.chesspiecemovement.chess.pieces.Queen;
+import com.problemstatement.chesspiecemovement.chess.util.ChessUtil;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

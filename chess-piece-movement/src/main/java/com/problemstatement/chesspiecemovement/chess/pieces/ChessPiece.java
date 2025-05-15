@@ -1,4 +1,4 @@
-package com.problemstatement.chesspiecemovement.chess;
+package com.problemstatement.chesspiecemovement.chess.pieces;
 
 import java.util.List;
 

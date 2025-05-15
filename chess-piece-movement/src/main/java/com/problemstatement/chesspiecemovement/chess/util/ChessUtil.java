@@ -1,6 +1,6 @@
-package com.problemstatement.chesspiecemovement.util;
+package com.problemstatement.chesspiecemovement.chess.util;
 
-import com.problemstatement.chesspiecemovement.enums.Column;
+import com.problemstatement.chesspiecemovement.chess.enums.Column;
 
 public class ChessUtil {
     public static boolean isValidPosition(String position) {

@@ -1,4 +1,4 @@
-package com.problemstatement.chesspiecemovement.enums;
+package com.problemstatement.chesspiecemovement.chess.enums;
 
 public enum Column {
     A(0), B(1), C(2), D(3), E(4), F(5), G(6), H(7);
