@@ -1,6 +1,7 @@
 package com.problemstatement.chesspiecemovement.chess.pieces;
 
 import com.problemstatement.chesspiecemovement.chess.constants.ChessConstants;
+import com.problemstatement.chesspiecemovement.chess.enums.Color;
 import com.problemstatement.chesspiecemovement.chess.enums.Column;
 import com.problemstatement.chesspiecemovement.chess.enums.Direction;
 import com.problemstatement.chesspiecemovement.chess.enums.Steps;
@@ -12,20 +13,23 @@ import java.util.List;
 public abstract class AbstractChessPiece implements ChessPiece {
     protected final Direction[] allowedDirections;
     protected final Steps allowedSteps;
+    protected final Color color;
     protected String position;
 
-    public AbstractChessPiece(Direction[] allowedDirections, Steps allowedSteps, String position) {
+    public AbstractChessPiece(Direction[] allowedDirections, Steps allowedSteps,  String position, Color color) {
         if (!ChessUtil.isValidPosition(position)) {
             throw new IllegalArgumentException("Invalid position:" + position);
         }
         this.allowedDirections = allowedDirections;
         this.allowedSteps = allowedSteps;
+        this.color = color;
         this.position = position;
     }
 
-    public AbstractChessPiece(Direction[] allowedDirections, Steps allowedSteps) {
+    public AbstractChessPiece(Direction[] allowedDirections, Steps allowedSteps, Color color) {
         this.allowedDirections = allowedDirections;
         this.allowedSteps = allowedSteps;
+        this.color = color;
     }
 
     public Direction[] getAllowedDirections() {
@@ -67,7 +71,12 @@ public abstract class AbstractChessPiece implements ChessPiece {
 
         for (int i = 0; i < steps; i++) {
             x += direction.getX();
-            y += direction.getY();
+
+            if(this.color == Color.BLACK) {
+                y -= direction.getY() ;
+            }else{
+                y += direction.getY();
+            };
             if (x < 0 || x > 7 || y < 0 || y > 7) {
                 break;
             }

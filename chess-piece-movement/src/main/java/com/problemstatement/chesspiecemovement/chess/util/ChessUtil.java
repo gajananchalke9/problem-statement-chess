@@ -28,4 +28,18 @@ public class ChessUtil {
 
         return new int[]{x, y};
     }
+
+    public static boolean isValidColor(String color) {
+        if (color == null || color.length() <= 0) {
+            return false;
+        }
+
+        switch (color.toUpperCase()) {
+            case "BLACK": return true;
+            case "WHITE": return true;
+            default: return false;
+        }
+
+
+    }
 }
