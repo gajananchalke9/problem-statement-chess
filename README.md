@@ -54,21 +54,24 @@ Following things need to be installed on your system:
 ### Web Interface
 
 Start the application:
-    ```bash
-    java -jar target/chess-piece-movement-0.0.1-SNAPSHOT.jar
-    ```
+
+```bash
+java -jar target/chess-piece-movement-0.0.1-SNAPSHOT.jar
+```
 
 Access the REST API at:
-    ```
-    http://localhost:8080/chess/moves?piece=KING&position=D5&color=WHITE
-    ```
+
+```
+http://localhost:8080/chess/moves?piece=KING&position=D5&color=WHITE
+```
 
 ### Interactive Terminal Mode
 
 Run the application in interactive mode:
-    ```bash
-    java -jar target/chess-piece-movement-0.0.1-SNAPSHOT.jar interactive
-    ```
+
+```bash
+java -jar target/chess-piece-movement-0.0.1-SNAPSHOT.jar interactive
+```
 
 Follow the on-screen prompts to input piece type, position, and color.
 
